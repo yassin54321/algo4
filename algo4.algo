@@ -1,0 +1,21 @@
+PROCEDURE swap(x:INTEGER, y:INTEGER)
+VAR
+    switcher:INTEGER;
+BEGIN
+   switcher:=x;
+   x:=y;
+   y:=switcher;
+END
+ALGORITHM insertion_sort
+VAR
+tab: ARRAY_OF_INTEGER;
+i,j: INTEGER;
+BEGIN
+    FOR i FROM 1 TO tab.Length-1 STEP 1  DO
+        j:=i;
+        WHILE (j=>0 AND tab[j-1]>t[j]) DO
+           swap(tab[j],tab[j-1]);
+           j--;
+        END_WHILE
+    END_FOR
+END
